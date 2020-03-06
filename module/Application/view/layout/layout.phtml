@@ -10,17 +10,17 @@
             ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
         ?>
 
+        <!-- Scripts -->
+        <?= $this->inlineScript()
+            ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery-3.3.1.min.js'))
+        ?>
         <!-- Le styles -->
         <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/fa.png'])
             ->prependStylesheet($this->basePath('css/style.css'))
             ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
         ?>
 
-        <!-- Scripts -->
-        <?= $this->inlineScript()
-            ->prependFile($this->basePath('js/bootstrap.min.js'))
-            ->prependFile($this->basePath('js/jquery-3.3.1.min.js'))
-        ?>
         
     </head>
     <hr>                
@@ -28,12 +28,12 @@
         <nav class=" menu navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand" href="<?= $this->url('home') ?>">
+                        <img src="<?= $this->basePath('img/logo.png') ?>" height="70" alt="EBK Design"/>
+                    </a>
+                    <button class="navbar-toggler pull-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= $this->url('home') ?>">
-                        <img src="<?= $this->basePath('img/logo.png') ?>" height="80" alt="EBK Design"/>
-                    </a>
                 </div>         
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
