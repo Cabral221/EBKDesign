@@ -255,6 +255,15 @@ div.container a.navbar-brand > img {
     background-color: #4fd4a8b7;
 }
 
+.suive ul{
+    list-style: none;
+    padding: 5px 0;
+}
+.suive ul li {
+    display: inline-block;
+    /* margin-left: 10px; */
+}
+
 /* @media(max-width:640px){
     .footer{
         margin-right: 0px!important;
