@@ -1,0 +1,132 @@
+<?= $this->doctype() ?>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle('EBK Design | Bienvenue')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/fa.png'])
+            ->prependStylesheet($this->basePath('css/style.css'))
+            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+        ?>
+
+        <!-- Scripts -->
+        <?= $this->inlineScript()
+            ->prependFile($this->basePath('js/bootstrap.min.js'))
+            ->prependFile($this->basePath('js/jquery-3.3.1.min.js'))
+        ?>
+        
+    </head>
+    <hr>                
+    <body>
+        <nav class=" menu navbar navbar-expand-md navbar-dark fixed-top bg-dark" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?= $this->url('home') ?>">
+                        <img src="<?= $this->basePath('img/logo.png') ?>" height="80" alt="EBK Design"/>
+                    </a>
+                </div>         
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link <?= $this->page == 'accueil' ? 'nav-active' : '' ?>" href="<?= $this->url('home') ?>">Accueil <span class="sr-only">(current)</span></a>                           
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link <?= $this->page == 'service' ? 'nav-active' : '' ?>" href="<?= $this->url('service') ?>">Services <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link <?= $this->page == 'apropos' ? 'nav-active' : '' ?>" href="<?= $this->url('apropos') ?>">A propos <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link <?= $this->page == 'contact' ? 'nav-active' : '' ?>" href="<?= $this->url('contact') ?>">Contact <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- <hr>         -->
+        <div class="container">
+            <?= $this->content ?>
+            <hr>
+        </div>
+        
+        <footer class="footer">
+            <div class="container foot">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Contactez-nous</h4>
+                        <div class="text">
+                            <img src="<?= $this->basePath('img/icon1.png') ?>" width="30px" alt="" srcset="">
+                            <a href="tel:+221778482414"> 77 848 24 14 / 77 159 85 41</a>
+                        </div>
+                        <div class="text">
+                            <img src="<?= $this->basePath('img/icon2.png') ?>" width="30px" alt="icone"/>
+                            <a href="mailto:elementboromkhass@gmail.com"> elementboromkhass@gmail.com</a>
+                        </div>
+                        <hr>
+                        <h4>Incrivez-vous à notre newsLetter</h4>
+                        <div class="text">
+
+                        <form action="#" method="post" class="">                         
+                            <input type="email" class="" id="email" placeholder="email@exemple.com">
+                            <button type="submit" class="btn nav-active mb-2">envoyer</button>
+                        </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>Horaire</h4>
+                        <div class="table">
+                            <table class="table">
+                                <tr>
+                                    <th>Jours</th>
+                                    <th>Ouverture</th>
+                                    <th>fermeture</th>
+                                </tr>
+                                <tr>
+                                    <td>Du Lundi au  Jeudi</td>
+                                    <td>08 h</td>
+                                    <td>19 h</td>
+                                </tr>
+                                <tr>
+                                    <td>Vendredi</td>
+                                    <td>08 h</td>
+                                    <td>13 h</td>
+                                </tr>
+                                <tr>
+                                    <td>Samedi</td>
+                                    <td>09 h</td>
+                                    <td>15 h</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row"> 
+                    <div class="col-sm-6">
+                        <p>Copyright &copy; <?= date('Y') ?> EBK Design - Toute reproduction est strictement interdite.</p>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <ul>
+                            <li><a href="#"><img src="<?= $this->basePath('img/icon2.png') ?>" width="30px" alt="icone"/></a></li>
+                            <li><a href=""><img src="<?= $this->basePath('img/icon2.png') ?>" width="30px" alt="icone"/></a></li>
+                            <li><a href=""><img src="<?= $this->basePath('img/icon2.png') ?>" width="30px" alt="icone"/></a></li>
+                            <li><a href=""><img src="<?= $this->basePath('img/icon2.png') ?>" width="30px" alt="icone"/></a></li>
+                        </ul>
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>
