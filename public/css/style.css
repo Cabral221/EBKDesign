@@ -209,7 +209,7 @@ div.container a.navbar-brand > img {
     padding: 20px;
 }
 .info a{
-    font-size: 12px;
+    font-size: 1rem;
     text-decoration: none;
     color: #343a40;
     /* margin-bottom: 10px; */
@@ -236,7 +236,7 @@ div.container a.navbar-brand > img {
     content: "";
     background: url("../img/LOGO1.png");
     /* background: url(image.jpg); */
-    background-size: 80%;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.8;
@@ -266,6 +266,14 @@ div.container a.navbar-brand > img {
     width: 100px;
     height: auto;
     padding: 20px auto;
+}
+.suive ul{
+    list-style: none;
+    padding: 5px 0;
+}
+.suive ul li {
+    display: inline-block;
+    /* margin-left: 10px; */
 }
 /* @media(max-width:640px){
     .footer{
