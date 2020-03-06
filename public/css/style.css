@@ -95,12 +95,11 @@ div.container a.navbar-brand > img {
     text-align: center!important;
 }
 .service-row  .header{
-    display: table-cell;
-    vertical-align: middle;
+    /*display: table-cell;
+    vertical-align: middle;*/
     border-radius: 50%;
     height: 110px;
     width: 110px;
-    /* margin: 0 auto; */
     text-align: center;
     padding: 15px 15px;
     background-color: #4fd4a8b7;
@@ -108,6 +107,9 @@ div.container a.navbar-brand > img {
 .service-container{
     width: 130px;
     margin: 20px auto;
+}
+.service-container .header{
+    margin: 0 auto;
 }
 .service-row  .header img{
     margin-top: auto;
@@ -204,15 +206,13 @@ div.container a.navbar-brand > img {
 }
 .info{
     background-color: #4fd4a8b7;
-    margin-left: 1rem;
+    padding: 20px;
 }
 .info a{
-
-        text-decoration: none;
-        color: #343a40;
-        /* margin-bottom: 10px; */
-
-
+    font-size: 12px;
+    text-decoration: none;
+    color: #343a40;
+    /* margin-bottom: 10px; */
 }
 .info a:hover {
     text-decoration: none;
@@ -254,7 +254,19 @@ div.container a.navbar-brand > img {
 .con input:hover{
     background-color: #4fd4a8b7;
 }
-
+.card{
+    margin: 5px 5px;
+}
+.card-img-top-costum {
+    position: relative;
+    top: 50%;
+    left: calc(50% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: auto;
+    padding: 20px auto;
+}
 /* @media(max-width:640px){
     .footer{
         margin-right: 0px!important;
